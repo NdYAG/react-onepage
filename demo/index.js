@@ -29,7 +29,7 @@ class App extends React.Component {
     const pageCount = 3
     let pages = Array.apply(null, Array(pageCount)).map((_, i) => {
       return (
-        <Page>
+        <Page key={i}>
           {i}
         </Page>
       )
