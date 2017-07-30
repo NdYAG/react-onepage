@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { spring } from 'react-motion'
 
 export default function supportTouchDevice(Slider) {
-  return class TouchSlider extends Component {
+  class TouchSlider extends Component {
     constructor(props) {
       super(props)
       this.state = {
@@ -111,4 +111,6 @@ export default function supportTouchDevice(Slider) {
       )
     }
   }
+  TouchSlider.propTypes = Slider.propTypes
+  return TouchSlider
 }

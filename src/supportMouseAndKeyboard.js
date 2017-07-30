@@ -3,7 +3,7 @@ import { addWheelListener, removeWheelListener } from 'wheel'
 import { spring } from 'react-motion'
 
 export default function supportMouseAndKeyboard(Slider) {
-  return class WrappedSlider extends Component {
+  class WrappedSlider extends Component {
     constructor(props) {
       super(props)
       this.state = {
@@ -94,4 +94,6 @@ export default function supportMouseAndKeyboard(Slider) {
       )
     }
   }
+  WrappedSlider.propTypes = Slider.propTypes
+  return WrappedSlider
 }
