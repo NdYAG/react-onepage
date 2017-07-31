@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
 import Slider from '../src'
 import styled from 'styled-components'

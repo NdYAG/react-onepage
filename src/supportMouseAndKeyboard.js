@@ -53,11 +53,11 @@ export default function supportMouseAndKeyboard(Slider) {
           this.handleNext()
         }
       }
-      addWheelListener(document.body, this.onWheel)
+      addWheelListener(document, this.onWheel)
       document.addEventListener('keydown', this.onKeydown)
     }
     componentWillUnmount() {
-      removeWheelListener(document.body, this.onWheel)
+      removeWheelListener(document, this.onWheel)
       document.removeEventListener('keydown', this.onKeydown)
     }
     handlePage() {
