@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "rm -rf lib && mkdir lib && babel src -d lib",
+    "prepublishOnly": "npm run build",
     "start": "webpack-dev-server",
     "test": "jest"
   },
