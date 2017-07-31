@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "WebkitTransform": "translate3d(0, 0px, 0)",
+        "height": "100%",
+        "transform": "translate3d(0, 0px, 0)",
+      }
+    }
+  >
+    <div>
+      0
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`slides to prev/next when hit arrow up/down 1`] = `
+<div
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "WebkitTransform": "translate3d(0, -700px, 0)",
+        "height": "100%",
+        "transform": "translate3d(0, -700px, 0)",
+      }
+    }
+  >
+    <div>
+      0
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`slides to prev/next when hit arrow up/down 2`] = `
+<div
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "WebkitTransform": "translate3d(0, 0px, 0)",
+        "height": "100%",
+        "transform": "translate3d(0, 0px, 0)",
+      }
+    }
+  >
+    <div>
+      0
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`slides to prev/next when mouse wheel forwards/backwards 1`] = `
+<div
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "WebkitTransform": "translate3d(0, -700px, 0)",
+        "height": "100%",
+        "transform": "translate3d(0, -700px, 0)",
+      }
+    }
+  >
+    <div>
+      0
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`slides to prev/next when mouse wheel forwards/backwards 2`] = `
+<div
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "WebkitTransform": "translate3d(0, 0px, 0)",
+        "height": "100%",
+        "transform": "translate3d(0, 0px, 0)",
+      }
+    }
+  >
+    <div>
+      0
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+  </div>
+</div>
+`;
