@@ -13,7 +13,6 @@ class App extends Component {
     this.state = { pageIndex: 0 }
   }
   handlePage(pageIndex) {
-    console.log('calling handlepage', pageIndex)
     this.setState({ pageIndex })
   }
   render() {
@@ -21,7 +20,6 @@ class App extends Component {
       <Slider
         pageIndex={this.state.pageIndex}
         pageCount={3}
-        pageHeight={700}
         onPage={this.handlePage.bind(this)}>
         <div>0</div>
         <div>1</div>

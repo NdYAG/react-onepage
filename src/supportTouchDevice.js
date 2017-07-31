@@ -112,5 +112,8 @@ export default function supportTouchDevice(Slider) {
     }
   }
   TouchSlider.propTypes = Slider.propTypes
+  TouchSlider.defaultProps = {
+    pageHeight: window.innerHeight
+  }
   return TouchSlider
 }

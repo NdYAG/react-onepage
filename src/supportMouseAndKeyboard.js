@@ -95,5 +95,8 @@ export default function supportMouseAndKeyboard(Slider) {
     }
   }
   WrappedSlider.propTypes = Slider.propTypes
+  WrappedSlider.defaultProps = {
+    pageHeight: window.innerHeight
+  }
   return WrappedSlider
 }

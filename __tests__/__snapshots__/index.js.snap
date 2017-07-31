@@ -41,9 +41,9 @@ exports[`slides to prev/next when hit arrow up/down 1`] = `
   <div
     style={
       Object {
-        "WebkitTransform": "translate3d(0, -700px, 0)",
+        "WebkitTransform": "translate3d(0, -768px, 0)",
         "height": "100%",
-        "transform": "translate3d(0, -700px, 0)",
+        "transform": "translate3d(0, -768px, 0)",
       }
     }
   >
@@ -101,9 +101,9 @@ exports[`slides to prev/next when mouse wheel forwards/backwards 1`] = `
   <div
     style={
       Object {
-        "WebkitTransform": "translate3d(0, -700px, 0)",
+        "WebkitTransform": "translate3d(0, -768px, 0)",
         "height": "100%",
-        "transform": "translate3d(0, -700px, 0)",
+        "transform": "translate3d(0, -768px, 0)",
       }
     }
   >

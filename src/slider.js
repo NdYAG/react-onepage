@@ -46,7 +46,7 @@ export default class Slider extends Component {
 Slider.propTypes = {
   pageIndex: PropTypes.number.isRequired,
   pageCount: PropTypes.number.isRequired,
-  pageHeight: PropTypes.number,
+  pageHeight: PropTypes.number.isRequired,
   onPage: PropTypes.func,
   children: PropTypes.any,
   style: PropTypes.object

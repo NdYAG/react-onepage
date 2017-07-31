@@ -37,7 +37,6 @@ class App extends React.Component {
       <Slider
         pageCount={pageCount}
         pageIndex={pageIndex}
-        pageHeight={window.innerHeight}
         onPage={this.handlePage.bind(this)}>
         {pages}
       </Slider>
