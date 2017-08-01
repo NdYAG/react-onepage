@@ -61,7 +61,7 @@ export default function supportMouseAndKeyboard(Slider) {
       document.removeEventListener('keydown', this.onKeydown)
     }
     handlePage() {
-      let { pageIndex, onPage, style } = this.props
+      let { pageIndex, onPage } = this.props
       let { direction } = this.state
       if (arguments.length) {
         onPage.apply(this, Array.prototype.slice.call(arguments, 0))

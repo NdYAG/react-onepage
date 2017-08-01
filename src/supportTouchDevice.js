@@ -65,7 +65,7 @@ export default function supportTouchDevice(Slider) {
       })
     }
     handlePage() {
-      const { onPage, pageIndex, style } = this.props
+      const { onPage, pageIndex } = this.props
       const { isPressed, pressed, delta } = this.state
       if (arguments.length) {
         onPage.apply(this, Array.prototype.slice.call(arguments, 0))
