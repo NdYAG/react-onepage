@@ -1,7 +1,7 @@
 {
   "name": "react-onepage",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf lib && mkdir lib && babel src -d lib",
