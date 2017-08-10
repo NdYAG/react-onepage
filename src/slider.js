@@ -45,7 +45,6 @@ export default class Slider extends Component {
 
 Slider.propTypes = {
   pageIndex: PropTypes.number.isRequired,
-  pageCount: PropTypes.number.isRequired,
   pageHeight: PropTypes.number.isRequired,
   onPage: PropTypes.func,
   children: PropTypes.any,
@@ -53,7 +52,6 @@ Slider.propTypes = {
 }
 Slider.defaultProps = {
   pageIndex: 0,
-  pageCount: 1,
   pageHeight: window.innerHeight,
   style: {
     offset: 0

@@ -19,7 +19,6 @@ class App extends Component {
     return (
       <Slider
         pageIndex={this.state.pageIndex}
-        pageCount={3}
         onPage={this.handlePage.bind(this)}>
         <div>0</div>
         <div>1</div>

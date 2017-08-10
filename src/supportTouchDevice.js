@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, Children } from 'react'
 import { spring } from 'react-motion'
 
 export default function supportTouchDevice(Slider) {
@@ -42,7 +42,8 @@ export default function supportTouchDevice(Slider) {
       }
     }
     end() {
-      const { pageIndex, pageCount, pageHeight } = this.props
+      const { pageIndex, pageHeight, children } = this.props
+      const pageCount = Children.count(children)
       const { delta } = this.state
       let [x, y] = delta
       let newDelta = [0, 0]

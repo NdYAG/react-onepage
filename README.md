@@ -13,8 +13,7 @@ npm install react-onepage
 ## API
 
 * pageIndex: number
-* pageCount: number
-* onPage: function
+* onPage: (nextPageIndex: number) => {}
 
 ```js
 import React, { Component } from 'react'
@@ -32,7 +31,6 @@ class App extends Component {
     return (
       <Slider
         pageIndex={this.state.pageIndex}
-        pageCount={3}
         onPage={this.handlePage.bind(this)}>
         <div>0</div>
         <div>1</div>
@@ -55,7 +53,7 @@ Onepage use `transform: translate` for animation, which doesn't coordinate well 
 
 **3. I have elements with `overflow: scroll` inside each page**
 
-Nested scroller might not be common cases, but feel free to add an issue if you need it. Related implementation is under consideration.
+Nested scroller might not be common case, but feel free to add an issue if you need it. Related implementation is under consideration.
 
 **4. Performance**
 

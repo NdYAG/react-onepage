@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, Children } from 'react'
 import { addWheelListener, removeWheelListener } from 'wheel'
 import { spring } from 'react-motion'
 
@@ -27,7 +27,8 @@ export default function supportMouseAndKeyboard(Slider) {
       if (direction) {
         return
       }
-      let { pageIndex, pageCount } = this.props
+      const { pageIndex, children } = this.props
+      const pageCount = Children.count(children)
       if (pageIndex < pageCount - 1) {
         this.setState({
           direction: 1

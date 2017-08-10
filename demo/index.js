@@ -34,10 +34,7 @@ class App extends React.Component {
       )
     })
     return (
-      <Slider
-        pageCount={pageCount}
-        pageIndex={pageIndex}
-        onPage={this.handlePage.bind(this)}>
+      <Slider pageIndex={pageIndex} onPage={this.handlePage.bind(this)}>
         {pages}
       </Slider>
     )
