@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react-dom": "^16.0.1",
     "react-motion": "^0.5.0",
     "wheel": "^0.0.5"
   }
