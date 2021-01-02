@@ -1,0 +1,26 @@
+{
+  "name": "react-onepage",
+  "version": "1.2.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf lib && mkdir lib && babel src -d lib",
+    "prepublishOnly": "npm run build",
+    "start": "webpack serve"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rxjs": "^6.6.3",
+    "styled-components": "^5.2.1"
+  }
+}
