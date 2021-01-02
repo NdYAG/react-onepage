@@ -62,7 +62,7 @@ class Slider extends React.Component {
       this.setState({ delta: pos.y })
     })
 
-    // take last position as offset interpolated from lerp
+    // take last position interpolated from lerp as offset
     drags.pipe(buffer(drops)).subscribe((positions) => {
       this.offset += positions[positions.length - 1].y
     })
