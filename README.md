@@ -11,7 +11,6 @@ npm install react-onepage
 ## API
 
 * pageIndex: number
-* onPage: (nextPageIndex: number) => {}
 
 ```js
 import React, { Component } from 'react'
