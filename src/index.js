@@ -17,17 +17,15 @@ const wrapperStyle = {
   height: '100%',
 }
 
-const pageHeight = window.innerHeight
-
 const spring = {
   stiffness: 160,
   damping: 30,
-  precision: 1
+  precision: 1,
 }
 
 class Slider extends React.Component {
   state = {
-    delta: 0
+    delta: 0,
   }
   offset = 0
   componentDidMount() {
@@ -64,12 +62,13 @@ class Slider extends React.Component {
 
     // take last position interpolated from lerp as offset
     drags.pipe(buffer(drops)).subscribe((positions) => {
-      this.offset += positions[positions.length - 1].y
+      this.offset += positions[positions.length - 1]?.y || 0
     })
 
     // rebounds after drop
+    const { pageHeight, pageCount } = this.props
     let dest = 0
-    const maxDest = - (this.props.pageCount - 1) * pageHeight
+    const maxDest = - (pageCount - 1) * pageHeight
     const rebounds = drops.pipe(concatMap(dropEvent => {
       if (Math.abs(dropEvent.y) > pageHeight * 0.2) {
         dest = dropEvent.y < 0 ? dest - pageHeight : dest + pageHeight
@@ -86,11 +85,11 @@ class Slider extends React.Component {
             dest,
             spring.stiffness,
             spring.damping,
-            spring.precision
+            spring.precision,
           )
         }, [this.offset, 0]))
         .pipe(takeWhile((step) => {
-          return !(step[0] !== this.offset && step[1] === 0)
+          return !(step[0] === dest && step[1] === 0)
         }))
         .pipe(takeUntil(starts))
         .pipe(map(step => step[0]))
@@ -108,7 +107,7 @@ class Slider extends React.Component {
     }
   }
   render() {
-    const { pageCount, children } = this.props
+    const { pageCount, pageHeight, children } = this.props
     const pages = Array.from({ length: pageCount }, (_, i) => {
       const pageIndex = Math.floor(Math.abs(this.offset) / pageHeight)
       return (
@@ -125,6 +124,10 @@ class Slider extends React.Component {
       </div>
     )
   }
+}
+
+Slider.defaultProps = {
+  pageHeight: window.innerHeight,
 }
 
 export default Slider
